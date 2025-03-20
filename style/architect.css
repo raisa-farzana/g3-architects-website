@@ -89,6 +89,9 @@ main > section{
 }
 .banner-description{
     margin-bottom: 32px;
+    font-size: 1rem;
+    
+
 }
 .banner-image{
     width: 100%;
@@ -118,9 +121,44 @@ main > section{
 }
 .feature-description{
     font-size: 1rem;
-    
     max-width: 540px;
 
+}
+/* feature section related style */
+.features{
+    gap: 150px;
+}
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+    text-align: left;
+}
+.feature-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+.feature-card .section-title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 18px;
+
+}
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.featured-architect img{
+    width: 100%;
 }
 /* some facts related styles */
 .facts-container{
@@ -160,10 +198,19 @@ main > section{
 .sponsor-companies img{
     filter: grayscale(100%);
 }
+.footer{
+    max-width: 1440px;
+    margin: 50px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-description{
+    text-align: center;
+}
 /* small size responsive media query  */
 
 @media screen and (max-width: 576px) {
-    .navbar, .nav-link, .teams{
+    .navbar, .nav-link, .teams, .features{
         flex-direction: column;
     }
     .our-features{
@@ -175,6 +222,10 @@ main > section{
     .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
         
+    }
+    
+    .feature-card .section-title{
+        text-align: left;
     }
     .facts-container{
         justify-items: center;
@@ -188,6 +239,14 @@ main > section{
         justify-items: center;
         gap: 50px;
     }
+    .feature-card .feature-description{
+        text-align: left;
+        margin: 0;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
     
 }
 /* medium size responsive media query */
@@ -199,6 +258,13 @@ main > section{
         text-align: center;
         margin-left: 0;
     }
+    .feature-card .section-title{
+        text-align: left;
+    }
+    .features{
+        flex-direction: column;
+        margin: 20px 40px;
+    }
     .sponsor-companies, .facts-container{
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
@@ -208,5 +274,12 @@ main > section{
     .feature-description{
         text-align: center;
         margin: 30px auto;
+    }
+    .feature-card .feature-description{
+        text-align: left;
+        margin: 0;
+    }
+    #experience-badge{ 
+        margin-left: -30px;
     }
 }
